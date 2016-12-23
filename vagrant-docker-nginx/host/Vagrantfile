@@ -21,6 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # and then provision it with Docker
   config.vm.box = "debian/contrib-jessie64"
   config.vm.provision "docker"
+
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+
   config.vm.provision "shell", inline:
     "ps aux | grep 'sshd:' | awk '{print $2}' | xargs kill"
 

@@ -22,7 +22,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     docker.vagrant_vagrantfile = "host/Vagrantfile"
 
     # Specify the Docker image to use
-    docker.image = "nginx"
+    docker.run "nginx",
+        image: "nginx",
+        args: "-v /serve-to-nginx:/usr/share/nginx/html:ro"
 
     # Specify port mappings
     # If omitted, no ports are mapped!
@@ -30,6 +32,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Specify a friendly name for the Docker container
     docker.name = 'nginx-container'
-    cmd: "bash -l",
   end
 end
