@@ -9,10 +9,10 @@ This is a docker composer example. You can edit the files in ``./public/`` and s
 docker-compose up
 ```
 
-## Then visit localhost (runs on port 80)
+## Then visit localhost (runs on port 8080)
 
- * [localhost/](http://localhost/)
- * [localhost/test.html](http://localhost/test.html)
+ * [localhost:8080/](http://:8080localhost/)
+ * [localhost:8080/test.html](http://localhost:8080/test.html)
 
 ## Building a Docker Image
 
