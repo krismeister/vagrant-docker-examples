@@ -6,13 +6,12 @@ This is a docker composer example. You can edit the files in ``./public/`` and s
 
 ```
 #live interactive version:
-docker-compose up
+docker-compose up --abort-on-container-exit
 ```
 
 ## Then visit localhost (runs on port 8080)
 
  * [localhost:8080/](http://:8080localhost/)
- * [localhost:8080/test.html](http://localhost:8080/test.html)
 
 ## Building a Docker Image
 
