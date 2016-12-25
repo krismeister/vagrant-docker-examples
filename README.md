@@ -4,9 +4,9 @@ This example uses Docker and Vagrant and can deploy to Linode.com.
 
 There are 3 different ways you can run this example.
 
- # Locally, with Docker only - easiest for development.
- # Locally, with booting a Vagrant VM which then runs Docker - best for mimicking a real server.
- # On a Linode server, Vagrant deploys the entire site to the cloud.
+ * Locally, with Docker only - easiest for development.
+ * Locally, with booting a Vagrant VM which then runs Docker - best for mimicking a real server.
+ * On a Linode server, Vagrant deploys the entire site to the cloud.
 
  This example deploys an nginx docker image and puts the files in the `./public` directory into nginx's default site folder.
 
@@ -78,7 +78,7 @@ vagrant destroy <ID>
 
 Local Vagrant deploys the `./public` folder on [localhost:8080/](http://localhost:8080/) (port 8080).
 
-## Edit files live locally.
+#### Edit files live locally.
 Edit and add new files in `./public` to see them live on the server.
 
 **Note to VirtualBox Vagrant users:** virtual box has an issue with reloading files live. It involves `sendfile  off;`.
