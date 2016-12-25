@@ -8,7 +8,8 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = "nginx-docker-composer"
   config.vm.box = "ubuntu/trusty64"
 
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  # In local we access the site on port 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   config.vm.provision :docker
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always"
@@ -27,9 +28,6 @@ Vagrant.configure(2) do |config|
     override.vm.box = 'linode'
     override.vm.box_url = "https://github.com/displague/vagrant-linode/raw/master/box/linode.box"
 
-
-    override.vm.network "forwarded_port", guest: 8080, host: 80
-
     # rsync instead of using virtualbox shared folder
     override.vm.synced_folder "./", "/vagrant", type: "rsync", rsync__args: ["-a"]
 
@@ -39,7 +37,7 @@ Vagrant.configure(2) do |config|
     provider.label = 'vagrant-docker-compose-nginx'
 
     # ADD YOUR TOKEN
-    provider.token = 'xxxxxxxxxxxxxxx'
+    provider.token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
     override.ssh.private_key_path = '~/.ssh/id_rsa'
 
