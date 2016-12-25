@@ -7,8 +7,8 @@ There are 3 different ways you can run this example.
  * Locally, with Docker only - easiest for development.
  * Locally, with booting a Vagrant VM which then runs Docker - best for mimicking a real server.
  * On a Linode server, Vagrant deploys the entire site to the cloud.
-
- This example deploys an nginx docker image and puts the files in the `./public` directory into nginx's default site folder.
+ 
+This example deploys an nginx docker image and puts the files in the `./public` directory into nginx's default site folder.
 
 
 ## Run Locally with Docker
